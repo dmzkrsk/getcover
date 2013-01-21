@@ -1,0 +1,256 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Russian resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+#ifdef _WIN32
+LANGUAGE LANG_RUSSIAN, SUBLANG_DEFAULT
+#pragma code_page(1251)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)\r\n"
+    "LANGUAGE 25, 1\r\n"
+    "#pragma code_page(1251)\r\n"
+    "#include ""res\\GetCover.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""     // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\GetCover!.ico"
+IDI_SRC_RYM             ICON                    "res\\rym.ico"
+IDI_SRC_AMZ             ICON                    "res\\amazon.ico"
+IDI_SRC_ALL             ICON                    "res\\getall.ico"
+IDI_SRC_UNK             ICON                    "res\\unk.ico"
+IDI_ST_DW               ICON                    "res\\state\\download.ico"
+IDI_ST_ER               ICON                    "res\\state\\error1.ico"
+IDI_ST_EX               ICON                    "res\\state\\exists.ico"
+IDI_ST_OK               ICON                    "res\\state\\ok.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About GetCover!"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "GetCover! Version 0.1b",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "Copyright (c) DMZ 2007",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,164,19,50,16,WS_GROUP
+END
+
+IDD_GETCOVER_DIALOG DIALOGEX 0, 0, 465, 348
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU | WS_THICKFRAME
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "Get Cover!"
+MENU IDR_MAINMENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "Download cover",IDC_DOWNLOAD,226,111,78,16
+    PUSHBUTTON      "Close",IDCANCEL,408,325,50,16
+    EDITTEXT        IDC_ARTIST,41,20,116,14,ES_AUTOHSCROLL
+    GROUPBOX        "Search a cover",IDC_STATIC_TOP,7,7,451,61
+    LTEXT           "Artist",IDC_TITLE_AR,17,26,18,8
+    EDITTEXT        IDC_ALBUM,190,20,115,14,ES_AUTOHSCROLL
+    LTEXT           "Album",IDC_TITLE_AL,163,26,20,8
+    LTEXT           "Source",IDC_TITLE_SR,160,44,23,8
+    CONTROL         "",IDC_SOURCE,"ComboBoxEx32",CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP,190,42,115,120
+    DEFPUSHBUTTON   "Start search",IDB_SEARCH,53,42,87,14
+    CONTROL         "",IDL_COVERS,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,14,130,294,26
+    GROUPBOX        "Download cover",IDC_STATIC_BOT,7,101,451,103
+    EDITTEXT        IDC_SAVEPATH,46,112,74,14,ES_AUTOHSCROLL
+    LTEXT           "Save to",IDC_STATIC,15,114,26,8
+    PUSHBUTTON      "...",IDB_SAVEAS,201,111,22,16
+    GROUPBOX        "Release info",IDC_RELEASEINFO,7,267,250,74
+    ICON            IDR_MAINFRAME,IDC_ICONIMAGE,277,223,20,20
+    EDITTEXT        IDC_RELEASEINFOEDIT,90,274,163,63,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | NOT WS_BORDER | WS_VSCROLL
+    EDITTEXT        IDC_FILEMASK,124,112,74,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_DWNBOX,7,90,451,12,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+    EDITTEXT        IDC_INFOBOX,7,71,451,14,ES_MULTILINE | ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "TODO: <Company name>"
+            VALUE "FileDescription", "TODO: <File description>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "GetCover!.exe"
+            VALUE "LegalCopyright", "TODO: (c) <Company name>.  All rights reserved."
+            VALUE "OriginalFilename", "GetCover!.exe"
+            VALUE "ProductName", "TODO: <Product name>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_GETCOVER_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 458
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 341
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDM_COVERBOX MENU 
+BEGIN
+    POPUP "ListBoxMenu"
+    BEGIN
+        MENUITEM "Download cover",              IDC_LM_DOWNLOADCOVER
+        MENUITEM "Release info",                IDC_LM_RELEASE_INFO
+    END
+END
+
+IDR_MAINMENU MENU 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "Read tags from MP3 File",     ID_FILE_READTAGSFROMMP3FILE
+        MENUITEM "Clear thumbnail cache",       ID_FILE_CLEARTHUMBNAILCACHE
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_ABOUTBOX            "&About GetCover!..."
+    IDP_SOCKETS_INIT_FAILED "Windows sockets initialization failed."
+END
+
+STRINGTABLE 
+BEGIN
+    ID_LISTBOXMENU_RELEASEINFO "IDC_LM_RELEASE_INFO"
+    IDC_LM_DOWNLOADCOVER    "Download cover to the disc"
+    IDC_LM_RELEASE_INFO     "Open release info page in browser"
+END
+
+#endif    // Russian resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_RUS)
+LANGUAGE 25, 1
+#pragma code_page(1251)
+#include "res\GetCover.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"     // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
